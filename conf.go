@@ -28,6 +28,10 @@ func FromBytes(raw []byte) (*Data, error) {
 	return &Data{value: value}, nil
 }
 
+func FromMap(value map[string]interface{}) *Data {
+	return &Data{value: value}
+}
+
 type Data struct {
 	value map[string]interface{}
 }
