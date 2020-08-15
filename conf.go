@@ -99,6 +99,8 @@ func (data *Data) GetStrings(key string, defaultValue []string) []string {
 		switch tv := v.(type) {
 		case []interface{}:
 			return AsStrings(tv)
+		case []string:
+			return tv
 		default:
 			panic("whoops!")
 		}
